@@ -1,0 +1,10 @@
+.body {
+    background-color: lightblue;
+}
+#header {
+    color:black;
+    margin: auto;
+    text-align: center;
+    border: double 5px black;
+    font-family:"Lucidia Console", Courier, monospace;
+}
