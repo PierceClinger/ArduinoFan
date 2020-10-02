@@ -4,13 +4,147 @@
         <title>Instructions: Arduino Fan</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body class="body">
         <h1 id="header">Pierce Clinger's Arduino Fan Instructions</h1>
         <!--Introduction-->
         <section class="Intro">
-            <h2>Introduction</h2>
+            <h2 class="IntroTitle">Introduction</h2>
             <p>
                 Learning a new coding language can be very intimidating to many people. In a way, it is almost like learning a foreign language for the first time. The idea behind this simple project is to show how easy (and fun) learning how to code can be. I will be demonstrating this through a Arduino (microcontroller) and DC motor so we can see the code interact with the real world.
+            </p>
+        </section>
+        <!--Requirements-->
+        <h2 class="RequirementsTitle">Requirements</h2>
+        <h3 class="RequirementsHeader">Arduino UNO and USB Cable</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/01Arduino.jpg">
+            <p class="RequirementsText">
+                The Arduino is a microcontroller, which is essentially just a small computer, that will work as the brains of the operation. By comunicating with the Arduino via code, we can tell the DC motor how and when to rotate.
+            </p>
+        </section>
+        <h3 class="RequirementsHeader">Arduino Software</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/arduino-logo-1.png">
+            <p class="RequirementsText">
+                The Arduino software is essential to program the Arduino. You can find the free software <a href="https://www.arduino.cc/en/Main/Software">here</a> for Windows, Mac, and Linux.
+            </p>
+        </section>
+        <h3 class="RequirementsHeader">Breadboard</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/02Breadboard.jpg">
+            <p class="RequirementsText">
+                The breadboard will make prototyping our project very easy since all the male to male wires will click right into it. This also ensures that if we make a mistake wiring, we can easily fix it without having to remove solder.
+            </p>
+        </section>
+        <h3 class="RequirementsHeader">Power Supply Module</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/03PowerSupplyModule.jpg">
+            <p class="RequirementsText">
+                Since the DC motor requires 9V and the Arduino only outputs 5V, we will need a power supply module to accept up to 9V and output the power to the motor.
+            </p>
+        </section>
+        <h3 class="RequirementsHeader">DC Motor</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/04DCMotor.jpg">
+            <p class="RequirementsText">
+                The motor will be our final output and what we will use the Arduino to program.
+            </p>
+        </section>
+        <h3 class="RequirementsHeader">Male to Male Wire</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/05MaleToMaleWire.jpg">
+            <p class="RequirementsText">
+                Male to male wire are not essential since you can use any wire, but the male to male wires are easily added and removed from both the breadboard and the Arduino.
+            </p>
+        </section>
+        <h3 class="RequirementsHeader">L9110</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/06L9110.jpg">
+            <p class="RequirementsText">
+                The L9110 is a compact motor driver that will help our Arduino communicate with the DC motor.
+            </p>
+        </section>
+        <h3 class="RequirementsHeader">9V Battery with Battery Harness</h3>
+        <section class="Requirements">
+            <img class="RequirementsImg" src="images/07Battery.jpg">
+            <p class="RequirementsText">
+                Due to us having to use a 9V power supply, we will need a battery/power source that outputs 9 volts of power. I am using a 9V battery with a battery harness, but you are wilcome to use any 9 volt power supply.
+            </p>
+        </section>
+        <img class="ProductImg" src="images/UCTRONICS.jpg">
+        <a href="https://www.uctronics.com/uctronics-advanced-starter-kit-for-arduino-with-instruction-booklet-uno-r3-uno-r3-proto-shied-v3-relay-breadboard-power-supply-sg90-9g-servo-remote-controller-and-ir-receiver.html"><h2 class="ProductHeader">All of the items can be found in this one kit!</h2></a>
+        <h2 class="SetupTitle">Setup</h2>
+        <h3 class="SetupHeader">Step 1</h3>
+        <section class="Setup">
+            <img class="SetupImg" src="images/08Setup1.jpg">
+            <p class="SetupText">
+                We begin by attaching our components first. Connect the power supply, L9110, and DC motor to the breadboard similar to the picture above.
+            </p>
+        </section>
+        <h3 class="SetupHeader">Step 2</h3>
+        <section class="Setup">
+            <img class="SetupImg" src="images/09Setup2.jpg">
+            <p class="SetupText">
+                Now that we have the componets connected, we can connect the wires that will supply each component with power. Using the male to male wires, attach the "GND" from the Arduino to the negative "-" of the breadboard. Then attach the wires from the negative of the breadboard to each end pin of the L9110. Finally, attach wires from the positive "+" of the breadboard to the two center pins on the opposite side of the L9110. Use the picture above and the <a href="files/Wiring Diagram.pdf">wiring diagram</a> for reference.
+            </p>
+        </section>
+        <h3 class="SetupHeader">Step 3</h3>
+        <section class="Setup">
+            <img class="SetupImg" src="images/10Setup3.jpg">
+            <p class="SetupText">
+                For out last bit of wiring, we will connect two wires from input 4 and 3 on the arduino to the center left and center right pins of the L9110 respectively. Then, on the opposite side of the L9110, attach two wires from the outside pins of the L9110 to the wires attached to the motor. Use the picture above and the <a href="files/Wiring Diagram.pdf">wiring diagram</a> for reference.
+            </p>
+        </section>
+        <h3 class="SetupHeader">Step 4</h3>
+        <section class="Setup">
+            <img class="SetupImg" src="images/11Setup4.jpg">
+            <p class="SetupText">
+                Congradulations, we are almost done! Now we just plug the Arduino into the computer and prepare the program. You will need to open the Arduino software that you downloaded earlier and make sure your Arduino is connected. If you are unsure how to connect it, then you can use this <a href="https://www.arduino.cc/en/Guide/ArduinoUno">link</a>. After your device is connected, create a new project, and copy and paste the cody below (in the black box). Then all you have to do is "verify" the program and "upload" it to your device. This would conclude the guide but we have not attached the battery to the power supply yet.
+            </p>
+            <p class="code">
+                #define DIRA 4
+                <br>
+                #define DIRB 3
+                <br>
+                int i;
+                <br>
+                void setup()<br> 
+                {<br>
+                    //---set pin direction<br>
+                    pinMode(DIRA,OUTPUT);<br>
+                    pinMode(DIRB,OUTPUT);<br>
+                }
+                <br>
+                void loop()<br> 
+                {<br>
+                     //---back and forth example<br>
+                    digitalWrite(DIRA,LOW);  //reverse<br>
+                    digitalWrite(DIRB,HIGH);<br>
+                }
+            </p>
+        </section>
+        <h3 class="SetupHeader">Step 5</h3>
+        <section class="Setup">
+            <img class="SetupImg" src="images/12Setup5.jpg">
+            <p class="SetupText">
+                Finally, attach the battery to the power supply, make sure the power supply's switch is turned on, and see your DC motor run! You could use this project to build a compact fan, automate a door, or even build a toy car. The possibilities are endless! If your motor did not work, then refer to the troubleshoot section at the bottom of the page.
+            </p>
+        </section>
+        <h2 class="TroubleshootTitle">Troubleshoot</h2>
+        <section class="Troubleshoot">
+            <p class="TroubleshootText">
+                <b>Are your wires connected properly?</b><br>Check out the <a href="files/Wiring Diagram.pdf">wiring diagram</a> to make sure.
+                <br><br>
+                <b>Is the code correct and properly uploaded to your Arduino?</b><br>Make sure you copy and pasted the code from step 4 and then clicked the upload button on the top left corner of the Arduino software. Also, make sure the Arduino has two LEDs on and remains plugged into the computer.
+                <br><br>
+                <b>Is your 9 volt battery dead?</b><br>You can test it by tapping both of the terminals on your tongue. If you feel a little tingle then that means it still has a charge.
+                <br><br>
+                If you are still unable to get the motor to work then you may have a faulty part. Make sure you have followed the steps properly and have looked at the troubleshoot options above before replacing any components.
+            </p>
+        </section>
+        <section class="Credit">
+            <p class="CreditText">
+                Credit to UCTRONICS for the kit which contains everything you need for the build, including the code.
             </p>
         </section>
     </body>

@@ -1,10 +1,124 @@
-.body {
-    background-color: lightblue;
+body {
+    background-color: white;
+    color: black;
+    font-family:"Lucidia Console", Courier, monospace;
 }
 #header {
     color:black;
     margin: auto;
     text-align: center;
-    border: double 5px black;
+    border: solid 5px black;
+    border-radius: 5px;
     font-family:"Lucidia Console", Courier, monospace;
+}
+.IntroTitle {
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 5px;
+    border: solid 3px black;
+}
+.RequirementsTitle {
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 5px;
+    border: solid 3px black;
+}
+.RequirementsHeader {
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+    text-decoration: underline;
+}
+.Requirements{
+    display: flex;
+    padding: 20px;
+    border-bottom: 2px;
+    border-color: black;
+    border-bottom-style: dashed;
+}
+.RequirementsImg{
+    border: solid 5px black;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 0;
+    padding: 15px;
+}
+.RequirementsText{
+    margin: auto;
+    font-family:"Lucidia Console", Courier, monospace;
+    text-align: center;
+    width: 60%;
+    font-weight: 500;
+}
+.ProductImg {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.ProductHeader {
+    text-align: center;
+    margin: auto;
+}
+.SetupTitle {
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 5px;
+    border: solid 3px black;
+}
+.SetupHeader {
+    text-align: left;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+.SetupImg {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.SetupText {
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+    width: 60%;
+}
+.code {
+    background-color: black;
+    color: white;
+    margin: auto;
+    margin-top: 40px;
+    width: 50%;
+}
+.TroubleshootTitle {
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 5px;
+    border: solid 3px black;
+}
+.TroubleshootText {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    font-weight: 500;
+    width: 60%;
+}
+.CreditText {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    font-weight: 500;
 }
