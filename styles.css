@@ -1,7 +1,7 @@
 body {
     background-color: white;
     color: black;
-    font-family:"Lucidia Console", Courier, monospace;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #header {
     color:black;
@@ -9,7 +9,7 @@ body {
     text-align: center;
     border: solid 5px black;
     border-radius: 5px;
-    font-family:"Lucidia Console", Courier, monospace;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .IntroTitle {
     text-align: center;
@@ -48,7 +48,7 @@ body {
 }
 .RequirementsText{
     margin: auto;
-    font-family:"Lucidia Console", Courier, monospace;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     width: 60%;
     font-weight: 500;
